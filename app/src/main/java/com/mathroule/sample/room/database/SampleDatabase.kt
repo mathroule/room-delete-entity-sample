@@ -33,7 +33,7 @@ abstract class SampleDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     SampleDatabase::class.java,
-                    "sample_database"
+                    "sample_database.db"
                 ).allowMainThreadQueries() // Only for testing purpose
                     .fallbackToDestructiveMigration()
                     .build()
