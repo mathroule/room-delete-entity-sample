@@ -11,7 +11,4 @@ abstract class SampleDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     abstract fun insert(user: User): Long
-
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    abstract fun insert(book: Book): Long
 }

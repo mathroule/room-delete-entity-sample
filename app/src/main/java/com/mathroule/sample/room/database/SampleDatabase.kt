@@ -9,10 +9,12 @@ import com.mathroule.sample.room.database.entity.User
 
 @Database(
     entities = [
-        Book::class,
         User::class
     ],
-    version = 1,
+    views = [
+        Book::class
+    ],
+    version = 2,
     exportSchema = true
 )
 abstract class SampleDatabase : RoomDatabase() {
