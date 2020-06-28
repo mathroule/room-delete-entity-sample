@@ -4,15 +4,13 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.mathroule.sample.room.database.entity.Book
 import com.mathroule.sample.room.database.entity.User
 
 @Database(
     entities = [
-        Book::class,
         User::class
     ],
-    version = 1,
+    version = 2,
     exportSchema = true
 )
 abstract class SampleDatabase : RoomDatabase() {
