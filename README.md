@@ -1,4 +1,4 @@
-# room-delete-entity-sample
+# Room delete entity sample
 
 Sample project to showcase Room not deleting table when an entity is deleted during destructive migration.
 
