@@ -8,6 +8,6 @@ import androidx.room.PrimaryKey
     tableName = "user"
 )
 data class User(
-    @ColumnInfo(name = "id") @PrimaryKey(autoGenerate = true) val id: Long = 0L,
-    @ColumnInfo(name = "name") val name: String
+    @ColumnInfo(name = "user_id") @PrimaryKey(autoGenerate = true) val id: Long = 0L,
+    @ColumnInfo(name = "user_name") val name: String
 )
