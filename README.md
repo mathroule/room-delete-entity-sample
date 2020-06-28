@@ -5,11 +5,11 @@ Sample project to showcase Room not deleting table when an entity is deleted dur
 To test the project, run master branch on a device. Then checkout one of the following branch and run it on the same device.
 
 ## Delete an entity
-Branch [delete-book-entity](./tree/delete-book-entity): `Book` entity has been removed from code.
+Branch [delete-book-entity](../../tree/delete-book-entity): `Book` entity has been removed from code.
 Room will not drop the table during the database destructive migration.
 
 # Convert and entity to a database view
-Branch [convert-book-entity-to-view](./tree/convert-book-entity-to-view): `Book` entity has been transformed to a database view.
+Branch [convert-book-entity-to-view](../../tree/convert-book-entity-to-view): `Book` entity has been transformed to a database view.
 Room will not drop the table during the database destructive migration, but will try to delete the view. This lead to crash:
 ```
 java.lang.RuntimeException: Unable to start activity ComponentInfo{com.mathroule.sample.room/com.mathroule.sample.room.MainActivity}: android.database.sqlite.SQLiteException: use DROP TABLE to delete table book (code 1 SQLITE_ERROR): , while compiling: DROP VIEW IF EXISTS `book`
