@@ -8,13 +8,13 @@ To test the project, run master branch on a device. Then checkout one of the fol
 Branch [delete-book-entity](../../tree/delete-book-entity): `Book` entity has been removed from code. The `User` entity columns has been removed.
 Room will not drop the table during the database destructive migration, it will lead to invalid foreign key constraint, since referenced column has been removed.
 
-## Database schema version 1
+### Database schema version 1
 ![Database schema version 1](./database-schema-version-1.png)
 
-## Database schema version 2
+### Database schema version 2
 ![Database schema version 2](./database-schema-version-2.png)
 
-# Convert and entity to a database view
+## Convert and entity to a database view
 Branch [convert-book-entity-to-view](../../tree/convert-book-entity-to-view): `Book` entity has been transformed to a database view.
 Room will not drop the table during the database destructive migration, but will try to delete the view. This lead to crash:
 ```
@@ -68,3 +68,8 @@ java.lang.RuntimeException: Unable to start activity ComponentInfo{com.mathroule
     at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:493) 
     at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:858)
 ```
+
+## Generated sample database implementation
+Master | Removed Book entity | Converted Book entity to view
+------------------------------------------------------------
+![SampleDatabase_Impl](./drop-all-table-version-2.png) | ![SampleDatabase_Impl](./drop-all-table-version-2-removed.png) | ![SampleDatabase_Impl](./drop-all-table-version-2-view.png) |
