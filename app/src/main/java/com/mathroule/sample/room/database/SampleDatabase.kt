@@ -35,6 +35,7 @@ abstract class SampleDatabase : RoomDatabase() {
                     SampleDatabase::class.java,
                     "sample_database"
                 ).allowMainThreadQueries() // Only for testing purpose
+                    .fallbackToDestructiveMigration()
                     .build()
                 INSTANCE = instance
                 return instance
