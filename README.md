@@ -5,8 +5,8 @@ Sample project to showcase Room not deleting table when an entity is deleted dur
 To test the project, run master branch on a device. Then checkout one of the following branch and run it on the same device.
 
 ## Delete an entity
-Branch [delete-book-entity](../../tree/delete-book-entity): `Book` entity has been removed from code.
-Room will not drop the table during the database destructive migration.
+Branch [delete-book-entity](../../tree/delete-book-entity): `Book` entity has been removed from code. The `User` entity columns has been removed.
+Room will not drop the table during the database destructive migration, it will lead to invalid foreign key constraint, since referenced column has been removed.
 
 # Convert and entity to a database view
 Branch [convert-book-entity-to-view](../../tree/convert-book-entity-to-view): `Book` entity has been transformed to a database view.
