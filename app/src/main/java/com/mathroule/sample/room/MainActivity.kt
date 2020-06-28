@@ -2,9 +2,9 @@ package com.mathroule.sample.room
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.mathroule.sample.room.database.Book
-import com.mathroule.sample.room.database.User
-import com.mathroule.sample.room.database.UserDatabase
+import com.mathroule.sample.room.database.entity.Book
+import com.mathroule.sample.room.database.entity.User
+import com.mathroule.sample.room.database.SampleDatabase
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val sampleDao = UserDatabase.getDatabase(this).sampleDao()
+        val sampleDao = SampleDatabase.getDatabase(this).sampleDao()
 
         val user = User(name = "John Smith")
         val userId = sampleDao.insert(user)

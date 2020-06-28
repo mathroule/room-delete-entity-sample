@@ -1,4 +1,4 @@
-package com.mathroule.sample.room.database
+package com.mathroule.sample.room.database.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

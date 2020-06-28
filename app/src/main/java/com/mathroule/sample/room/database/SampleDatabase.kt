@@ -4,6 +4,8 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.mathroule.sample.room.database.entity.Book
+import com.mathroule.sample.room.database.entity.User
 
 @Database(
     entities = [
@@ -13,16 +15,16 @@ import androidx.room.RoomDatabase
     version = 1,
     exportSchema = true
 )
-public abstract class UserDatabase : RoomDatabase() {
+abstract class SampleDatabase : RoomDatabase() {
 
     abstract fun sampleDao(): SampleDao
 
     companion object {
 
         @Volatile
-        private var INSTANCE: UserDatabase? = null
+        private var INSTANCE: SampleDatabase? = null
 
-        fun getDatabase(context: Context): UserDatabase {
+        fun getDatabase(context: Context): SampleDatabase {
             val tempInstance = INSTANCE
             if (tempInstance != null) {
                 return tempInstance
@@ -30,7 +32,7 @@ public abstract class UserDatabase : RoomDatabase() {
             synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    UserDatabase::class.java,
+                    SampleDatabase::class.java,
                     "sample_database"
                 ).allowMainThreadQueries() // Only for testing purpose
                     .build()

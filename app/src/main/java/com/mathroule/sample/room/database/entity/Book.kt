@@ -1,9 +1,10 @@
-package com.mathroule.sample.room.database
+package com.mathroule.sample.room.database.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
+import com.mathroule.sample.room.database.entity.User
 
 @Entity(
     tableName = "book",
