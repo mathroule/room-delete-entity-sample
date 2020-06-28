@@ -70,6 +70,7 @@ java.lang.RuntimeException: Unable to start activity ComponentInfo{com.mathroule
 ```
 
 ## Generated sample database implementation
+
 Master | Removed Book entity | Converted Book entity to view
 ------------------------------------------------------------
-![SampleDatabase_Impl](./drop-all-table-version-2.png) | ![SampleDatabase_Impl](./drop-all-table-version-2-removed.png) | ![SampleDatabase_Impl](./drop-all-table-version-2-view.png) |
+![SampleDatabase_Impl](./drop-all-table-version-1.png) | ![SampleDatabase_Impl](./drop-all-table-version-2-removed.png) | ![SampleDatabase_Impl](./drop-all-table-version-2-view.png) |
