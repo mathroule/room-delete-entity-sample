@@ -1,0 +1,1 @@
+# room-delete-entity-sample
